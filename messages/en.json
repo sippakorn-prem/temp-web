@@ -1,0 +1,1384 @@
+{
+  "app": {
+    "name": "SafeDeal",
+    "tagline": "Trust between strangers."
+  },
+  "landing": {
+    "meta": {
+      "title": "SafeDeal — Peer-to-peer escrow for Thailand",
+      "description": "SafeDeal holds the money safely until you get your item, then pays the seller. Buy and sell person-to-person without the risk of a scam."
+    },
+    "nav": {
+      "how": "How it works",
+      "trust": "Trust",
+      "pay": "Payments",
+      "signIn": "Sign in",
+      "start": "Create a deal",
+      "language": "Language"
+    },
+    "hero": {
+      "eyebrow": "Fees start at ฿0",
+      "h1": "Buy and sell safely",
+      "h2": "with SafeDeal",
+      "c1": "Payment held until delivery",
+      "c2": "Multiple ways to pay",
+      "c3": "Buyer and seller verified",
+      "ctaStart": "Start your deal today"
+    },
+    "problem": {
+      "tag": "The problem",
+      "buyerH": "Pay first?",
+      "buyerB": "You send the money to a stranger and just hope the item shows up. If it never does, it's gone.",
+      "sellerH": "Ship first?",
+      "sellerB": "You hand over the item and just hope the payment comes. If it never does, you've lost it.",
+      "imgBuyerAlt": "Money leaves the buyer's phone and the item never arrives",
+      "imgSellerAlt": "The parcel is shipped but no payment comes back",
+      "resolvePre": "So neither of you goes first.",
+      "resolveAccent": "SafeDeal holds the money in the middle."
+    },
+    "flow": {
+      "kicker": "How it works",
+      "h": "One safe deal, start to finish.",
+      "cap0": "Money goes in",
+      "cap1": "Safe in the middle",
+      "cap2": "The seller ships",
+      "cap3": "You check it",
+      "cap4": "Money released",
+      "sub0": "The money leaves the buyer, but not to the seller yet.",
+      "sub1": "The seller can't touch it; the buyer can't pull it back.",
+      "sub2": "Safe to send now — payment is already secured.",
+      "sub3": "The buyer opens it and checks it's as described.",
+      "sub4": "Only now does the money reach the seller, minus a small fee.",
+      "termsSample": "As described, tested working",
+      "deadlineSample": "3 days after delivery",
+      "mLabel": "Money",
+      "sdLabel": "SafeDeal",
+      "railBuyer": "Buyer",
+      "railSd": "SafeDeal",
+      "railSeller": "Seller",
+      "buyerRole": "Pays into escrow",
+      "sellerRole": "Paid on release",
+      "money0": "Buyer → SafeDeal",
+      "money1": "Held by SafeDeal",
+      "money2": "Held by SafeDeal",
+      "money3": "Held by SafeDeal",
+      "money4": "SafeDeal → Seller",
+      "sd0": "Takes the payment into escrow",
+      "sd1": "Holds it, neither side can take it",
+      "sd2": "Keeps it held, logs the tracking",
+      "sd3": "Waits for you to confirm receipt",
+      "sd4": "Releases to the seller, minus the 3% fee"
+    },
+    "trust": {
+      "kicker": "Why it's safe",
+      "h": "Trust that's built in, not promised.",
+      "lead": "Every part of a deal is protected by design — money, identity, evidence, and data.",
+      "i0h": "A licensed provider holds the money",
+      "i0b": "Funds sit with Omise (Opn), a licensed payment provider. SafeDeal never touches your money directly.",
+      "i1h": "Auto-refund protection",
+      "i1b": "If the seller never ships, the money comes back to the buyer automatically.",
+      "i2h": "Everyone is ID-verified",
+      "i2b": "Identity checks (KYC) reduce impersonation and fakes on both sides.",
+      "i3h": "Every step is audited",
+      "i3b": "Creation, payment, shipping and release are timestamped — a full, visible trail.",
+      "i4h": "Your data is encrypted",
+      "i4b": "Sensitive data is encrypted at rest, handled under Thailand's PDPA.",
+      "i5h": "Disputes decided by a real admin",
+      "i5b": "If something goes wrong, a person reviews the evidence — not a bot."
+    },
+    "realapp": {
+      "kicker": "Inside SafeDeal",
+      "h": "Every deal, clearly protected.",
+      "lead": "Protected money. Clear next steps. A complete record.",
+      "features": {
+        "funds": {
+          "label": "Money protected",
+          "title": "Know where your money is.",
+          "body": "Protected until the deal is complete."
+        },
+        "action": {
+          "label": "Next step",
+          "title": "Know exactly what to do.",
+          "body": "One clear action for each side."
+        },
+        "record": {
+          "label": "Full record",
+          "title": "Every step leaves proof.",
+          "body": "Payment, shipping, and evidence in one timeline."
+        },
+        "support": {
+          "label": "Human help",
+          "title": "Real help when it matters.",
+          "body": "Both sides' evidence, reviewed fairly."
+        }
+      },
+      "ui": {
+        "dealCode": "Deal · A7F3K2",
+        "protectedStatus": "Payment protected",
+        "providerLabel": "Held by a licensed provider",
+        "providerBody": "Released after confirmation.",
+        "viewingAsBuyer": "Viewing as buyer",
+        "sellerLabel": "Buying from CameraHub",
+        "nextAction": "Your next action",
+        "actionTitle": "Confirm the item when it arrives",
+        "actionBody": "Payment stays protected until you confirm.",
+        "actionLabel": "Confirm item received",
+        "historyTitle": "Deal history",
+        "historyStatus": "Fully recorded",
+        "eventCreated": "Deal created",
+        "eventPaid": "Payment protected",
+        "eventShipped": "Seller added shipping",
+        "eventNow": "Just now",
+        "trackingLabel": "Tracking evidence",
+        "trackingCode": "TH0125 6842 91",
+        "supportStatus": "Human review",
+        "supportTitle": "Evidence ready for review",
+        "supportBody": "A specialist reviews both sides.",
+        "evidencePhoto": "Item photos",
+        "evidenceShipping": "Shipping receipt",
+        "evidenceTimeline": "Deal timeline",
+        "evidenceSubmitted": "Submitted",
+        "deliveryAction": "Add delivery details",
+        "deliveryPopup": "Package is on the way",
+        "problemLabel": "Problem found",
+        "evidenceFlowLabel": "Evidence attached",
+        "supportPill": "SafeDeal support"
+      }
+    },
+    "card": {
+      "statusHeld": "Funds held safely",
+      "reassureTitle": "Funds held by SafeDeal",
+      "reassureBody": "Released to the seller only when you confirm.",
+      "amountLabel": "Amount in escrow",
+      "railAgreed": "Agreed",
+      "railPaid": "Paid",
+      "railHeld": "Held",
+      "railShipped": "Shipped",
+      "railDone": "Done",
+      "itemTitle": "Used mirrorless camera",
+      "mediaAlt": "Item photo",
+      "sellerName": "CameraHub"
+    },
+    "pay": {
+      "kicker": "Payment partners",
+      "h": "Pay the way you already do."
+    },
+    "finalCta": {
+      "h": "A deal you can actually trust.",
+      "sub": "Create your first deal in minutes. Free to start, with auto-refund protection from day one.",
+      "foot": "No item, full refund. Money held by a licensed provider.",
+      "start": "Start your first deal"
+    },
+    "footer": {
+      "copyright": "© 2026 SafeDeal",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "status": "System status"
+    }
+  },
+  "legal": {
+    "back": "Back to SafeDeal",
+    "updated": "Effective and last updated: 1 August 2026",
+    "terms": {
+      "title": "Terms of Service",
+      "intro": "These terms govern your use of SafeDeal's peer-to-peer escrow service. By creating an account or accepting a deal, you agree to them.",
+      "sections": [
+        {
+          "title": "1. The service",
+          "body": "SafeDeal provides a platform that records deal terms and coordinates funds held through our payment provider. SafeDeal is not the buyer, seller, courier, or manufacturer of an item and does not guarantee its quality or legality."
+        },
+        {
+          "title": "2. Your account",
+          "body": "You must provide accurate information, protect your sign-in credentials, and promptly tell us about unauthorized access. You may not use SafeDeal for unlawful, fraudulent, or prohibited transactions."
+        },
+        {
+          "title": "3. Deals and escrow",
+          "body": "A deal becomes binding when both parties accept its recorded terms. The buyer authorizes collection of the agreed amount. Funds are released or refunded only under the accepted deal flow, an applicable timeout, or a dispute decision."
+        },
+        {
+          "title": "4. Shipping and disputes",
+          "body": "Each party must provide truthful evidence and meet the deadlines shown in the deal. SafeDeal may review messages, shipment evidence, payment records, and other relevant information to resolve a dispute."
+        },
+        {
+          "title": "5. Fees and payment provider",
+          "body": "Applicable fees are shown before acceptance. Payment processing and custody are provided by Opn Payments (Omise) and may also be subject to its terms and verification requirements."
+        },
+        {
+          "title": "6. Suspension and liability",
+          "body": "We may restrict accounts or transactions to prevent harm, comply with law, or investigate suspected abuse. Nothing in these terms excludes rights or liability that cannot legally be excluded under Thai law."
+        },
+        {
+          "title": "7. Contact and governing law",
+          "body": "These terms are governed by the laws of Thailand. Contact SafeDeal support with questions, complaints, or notices. This product notice must receive Thai legal counsel review before production launch."
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Privacy Notice",
+      "intro": "This notice explains how SafeDeal handles personal data under Thailand's Personal Data Protection Act (PDPA).",
+      "sections": [
+        {
+          "title": "1. Data we collect",
+          "body": "We process account identifiers, verified contact details, deal and payment references, shipping information, evidence, device and security logs, consent records, and support communications. We minimize the data retained by SafeDeal."
+        },
+        {
+          "title": "2. Why we use it",
+          "body": "We use personal data to provide and secure escrow transactions, verify users, communicate deal events, prevent fraud, resolve disputes, comply with legal duties, and improve the service. Marketing is optional and based on separate consent."
+        },
+        {
+          "title": "3. Service providers and transfers",
+          "body": "Clerk provides authentication and may process account data outside Thailand under contractual safeguards. Opn Payments processes payments. Infrastructure and communication providers process only the data needed to deliver their services."
+        },
+        {
+          "title": "4. Retention and security",
+          "body": "We retain data only as long as needed for the service, disputes, fraud prevention, and legal obligations. Sensitive retained data is encrypted, access is restricted, and security-relevant actions are logged."
+        },
+        {
+          "title": "5. Your rights",
+          "body": "Subject to the PDPA, you may request access, correction, portability, objection, restriction, deletion, or withdrawal of consent. Withdrawing optional consent does not affect processing already lawfully performed."
+        },
+        {
+          "title": "6. Contact",
+          "body": "Contact SafeDeal support to exercise a privacy right or ask a question. You may also complain to Thailand's Personal Data Protection Committee. This notice must receive Thai legal counsel review before production launch."
+        }
+      ]
+    }
+  },
+  "dispute": {
+    "openTitle": "Report a problem",
+    "openBody": "Tell us what's wrong. Opening a dispute pauses the deal until SafeDeal reviews it.",
+    "reasonLabel": "What's the problem?",
+    "descriptionLabel": "Describe what happened (optional)",
+    "openCta": "Open dispute",
+    "openedToast": "Dispute opened — SafeDeal will review it.",
+    "failedToast": "Something went wrong. Please try again.",
+    "evidenceToast": "Evidence added.",
+    "cancelledToast": "Dispute withdrawn.",
+    "loading": "Loading…",
+    "notFound": "No dispute found.",
+    "resolutionTitle": "SafeDeal's decision",
+    "evidenceTitle": "Evidence",
+    "evidenceEmpty": "No evidence yet.",
+    "evidenceAttachment": "View attachment",
+    "addEvidenceLabel": "Add a note or attachment",
+    "addEvidenceCta": "Add evidence",
+    "cancelCta": "Withdraw dispute",
+    "reasons": {
+      "item_not_received": "Item not received",
+      "not_as_described": "Not as described",
+      "damaged": "Arrived damaged",
+      "counterfeit": "Counterfeit",
+      "other": "Other"
+    },
+    "status": {
+      "open": "Open",
+      "under_review": "Under review",
+      "resolved_buyer": "Resolved for buyer",
+      "resolved_seller": "Resolved for seller",
+      "cancelled": "Withdrawn"
+    }
+  },
+  "admin": {
+    "nav": {
+      "operations": "Operations",
+      "comingSoon": "Coming soon",
+      "disputes": "Disputes",
+      "users": "Users",
+      "deals": "Deals",
+      "audit": "Audit log",
+      "kpis": "KPIs",
+      "backToApp": "Back to SafeDeal"
+    },
+    "disputes": {
+      "queueTitle": "Disputes",
+      "queueSub": "Review work-list — oldest first to stay inside SLA.",
+      "filterOpen": "Open",
+      "filterUnderReview": "Under review",
+      "filterNeedsPayout": "Needs payout",
+      "filterResolved": "Resolved",
+      "filterAll": "All",
+      "colDeal": "Deal",
+      "colAmount": "Amount held",
+      "colReason": "Reason",
+      "colStatus": "Status",
+      "colOpened": "Opened",
+      "colBuyer": "Buyer",
+      "colSeller": "Seller",
+      "colEvidence": "Evidence",
+      "statusOpen": "Open",
+      "statusUnderReview": "Under review",
+      "statusResolvedSeller": "Resolved · seller",
+      "statusResolvedBuyer": "Resolved · buyer",
+      "pageSummary": "Showing {from}–{to} of {total} disputes",
+      "loading": "Loading disputes…",
+      "emptyTitle": "No open disputes",
+      "emptyBody": "The queue is clear. New disputes appear here, oldest first.",
+      "forbiddenTitle": "Staff access only",
+      "forbiddenBody": "You are signed in, but this account is not authorised for the admin console. If you think this is a mistake, contact an administrator.",
+      "forbiddenCta": "Back to SafeDeal",
+      "notFound": "Dispute not found.",
+      "back": "Back to queue",
+      "amountHeld": "Amount held",
+      "summaryTitle": "Deal summary",
+      "roleBuyer": "Buyer",
+      "roleSeller": "Seller",
+      "roleAdmin": "SafeDeal",
+      "item": "Item",
+      "timeline": "Deal timeline",
+      "refundMethod": "Refund method",
+      "paymentCard": "Card",
+      "paymentPromptpay": "PromptPay",
+      "paymentUnknown": "—",
+      "claimTitle": "Buyer's claim",
+      "claimBy": "Filed by",
+      "noClaim": "No description was provided.",
+      "evidenceTitle": "Evidence thread",
+      "evidenceSub": "Append-only record from both parties and SafeDeal.",
+      "newestLast": "Newest last",
+      "evidenceEmpty": "No evidence has been submitted yet.",
+      "attachment": "Attachment",
+      "viewFull": "View full",
+      "close": "Close",
+      "addEvidence": "Add evidence (admin)",
+      "addNotePh": "Admin note to append to the record…",
+      "submit": "Add to record",
+      "cancel": "Cancel",
+      "decision": "Decision",
+      "decisionSub": "Resolving releases the held funds and cannot be undone.",
+      "resolutionNote": "Resolution note",
+      "notePh": "Explain the reason for this decision (recorded on the case)…",
+      "noteRequired": "A resolution note is required before you can proceed.",
+      "takeReview": "Take under review",
+      "underReviewSince": "Under review since {when}",
+      "resolveBuyer": "Resolve for buyer",
+      "resolveSeller": "Resolve for seller",
+      "irreversibleHint": "Every resolution asks for a second confirmation and is logged with your name and a timestamp.",
+      "chooseShape": "Resolve for buyer — choose shape",
+      "chooseShapeSub": "Choose how the buyer is made whole.",
+      "shapeRefund": "Refund only",
+      "shapeRefundDesc": "Release the held amount back to the buyer. Seller does not get the item back.",
+      "shapeReturn": "Return then refund",
+      "shapeReturnDesc": "Buyer ships the item back first, then is refunded — flow not built yet.",
+      "comingSoon": "Coming soon",
+      "continue": "Continue",
+      "confirmReviewTitle": "Take this dispute under review?",
+      "confirmReviewBody": "Both parties will see that SafeDeal is now reviewing the case.",
+      "confirmReviewCta": "Take under review",
+      "confirmBuyerTitle": "Refund the buyer?",
+      "confirmBuyerBody": "The held amount is returned to the buyer and the deal is closed. This cannot be undone.",
+      "confirmBuyerCta": "Refund buyer",
+      "confirmSellerTitle": "Release to the seller?",
+      "confirmSellerBody": "The held amount is paid out to the seller and the deal is completed. This cannot be undone.",
+      "confirmSellerCta": "Release to seller",
+      "manualTitle": "Manual refund required (PromptPay)",
+      "manualBody": "This refund is via PromptPay. The provider cannot reverse it automatically — an operator must pay the buyer manually and then mark it paid.",
+      "promptpayNote": "This payout is not sent until an operator transfers it manually and confirms.",
+      "markPaidOut": "Mark as paid out",
+      "markPaidToast": "Marked as paid out — refund complete.",
+      "refundPaidOutLabel": "Refund paid out to the buyer.",
+      "outcomeBuyerTitle": "Refunded to buyer",
+      "outcomeBuyerBody": "The held amount was returned to the buyer.",
+      "outcomeSellerTitle": "Released to seller",
+      "outcomeSellerBody": "The held amount was paid out to the seller.",
+      "resolvedForBuyer": "Resolved for buyer",
+      "resolvedForSeller": "Resolved for seller",
+      "resolvedBy": "Resolved by",
+      "resolvedAt": "Resolved at",
+      "resolutionNoteLabel": "Resolution note",
+      "readonlyHint": "This case is closed — read-only.",
+      "tlCreated": "Deal created",
+      "tlPaid": "Payment held in escrow",
+      "tlShipped": "Shipped",
+      "tlNotShipped": "Not shipped",
+      "tlDelivered": "Delivered",
+      "tlNotDelivered": "Not delivered",
+      "tlOpened": "Dispute opened",
+      "tlNow": "now",
+      "reviewedToast": "Taken under review.",
+      "resolvedToast": "Dispute resolved.",
+      "evidenceToast": "Evidence added to the record.",
+      "failedToast": "Could not complete that. Please try again."
+    }
+  },
+  "common": {
+    "continue": "Continue",
+    "back": "Back",
+    "cancel": "Cancel",
+    "optional": "(optional)",
+    "or": "or",
+    "verified": "Verified",
+    "somethingWentWrong": "Something went wrong",
+    "tryAgain": "Please try again.",
+    "notYetBuilt": "This flow has its own design pass and lands in a later release.",
+    "signUpUnsupportedField": "Your account needs {fields}, which SafeDeal doesn't collect. Please contact support.",
+    "backToDashboard": "Back to dashboard",
+    "save": "Save",
+    "saving": "Saving…",
+    "edit": "Edit",
+    "close": "Close",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "countryCode": "Country calling code",
+    "searchCountries": "Search countries",
+    "noCountries": "No countries found."
+  },
+  "phoneCountries": {
+    "TH": "Thailand",
+    "US": "United States"
+  },
+  "chrome": {
+    "menu": "Menu",
+    "accountMenu": "Account menu",
+    "openNavigation": "Open navigation",
+    "closeNavigation": "Close navigation",
+    "expandNavigation": "Expand navigation",
+    "collapseNavigation": "Collapse navigation",
+    "actionRequired": "Action required",
+    "notVerified": "Contact details not verified",
+    "accountSettings": "Account settings",
+    "verificationCentre": "Verification centre",
+    "payoutAccount": "Payout account",
+    "language": "Language",
+    "signOut": "Sign out",
+    "verifyTitle": "Finish verifying your account",
+    "verifyBody": "Confirm your email and phone number so you can receive payouts. This keeps your escrow balance protected.",
+    "verifyNow": "Verify now",
+    "later": "Later"
+  },
+  "auth": {
+    "signIn": {
+      "title": "Sign in",
+      "subtitle": "Escrow you can trust for every deal.",
+      "identifierLabel": "Email or phone",
+      "identifierPlaceholder": "you@example.com",
+      "passwordLabel": "Password",
+      "useCode": "Use phone / email code instead",
+      "usePassword": "Use password instead",
+      "forgot": "Forgot password?",
+      "cta": "Sign in",
+      "ctaCode": "Send code",
+      "google": "Continue with Google",
+      "noAccount": "Don't have an account?",
+      "signUpLink": "Sign up",
+      "errorTitle": "Couldn't sign you in",
+      "errorBody": "That email/phone and password combination doesn't match our records."
+    },
+    "signUp": {
+      "title": "Create your account",
+      "emailLabel": "Email",
+      "emailPlaceholder": "you@example.com",
+      "phoneLabel": "Phone",
+      "phonePlaceholder": "08x-xxx-xxxx",
+      "phoneInvalid": "Enter a complete mobile number, e.g. 081-234-5678.",
+      "phoneHint": "You'll verify this before your first deal.",
+      "phoneSavedAs": "Saved as {number} — you'll verify this before your first deal.",
+      "passwordLabel": "Password",
+      "passwordHint": "At least 8 characters",
+      "botSlot": "Bot-protection widget renders here",
+      "cta": "Continue",
+      "haveAccount": "Already have an account?",
+      "signInLink": "Sign in",
+      "verifyEmailTitle": "Verify your email",
+      "verifyEmailCta": "Verify email",
+      "verifyPhoneTitle": "Verify your phone",
+      "verifyPhoneCta": "Verify phone",
+      "doneTitle": "You're all set",
+      "doneBody": "Your account is verified. Let's find you a deal.",
+      "doneCta": "Go to dashboard"
+    },
+    "otp": {
+      "title": "Enter verification code",
+      "sentTo": "Code sent to {destination}",
+      "label": "6-digit code",
+      "cta": "Verify",
+      "errorTitle": "Incorrect code",
+      "errorBody": "That code is invalid or has expired. Try again.",
+      "wrongDestination": "Wrong destination? Go back",
+      "didntGetIt": "Didn't get it?",
+      "resendIn": "Resend in {seconds}",
+      "resend": "Resend code",
+      "resendSent": "A new code is on its way."
+    },
+    "reset": {
+      "requestTitle": "Reset your password",
+      "requestBody": "We'll email you a code to verify it's you.",
+      "emailLabel": "Email",
+      "emailPlaceholder": "you@example.com",
+      "requestCta": "Send code",
+      "otpTitle": "Enter the code",
+      "otpCta": "Verify",
+      "newTitle": "Set a new password",
+      "newLabel": "New password",
+      "newHint": "At least 8 characters",
+      "confirmLabel": "Confirm password",
+      "confirmMismatch": "Both passwords must match.",
+      "newCta": "Update password",
+      "successTitle": "Password updated",
+      "successBody": "You can now sign in with your new password.",
+      "successCta": "Back to sign in"
+    }
+  },
+  "consent": {
+    "title": "Before you continue",
+    "body": "Please review and accept these to create your account.",
+    "tos": "I accept the",
+    "tosLink": "Terms of Service",
+    "privacy": "I accept the",
+    "privacyLink": "Privacy Notice",
+    "marketing": "I'd like to receive marketing emails",
+    "errorTitle": "Required agreements missing",
+    "errorBody": "Accept the Terms of Service and Privacy Notice to continue.",
+    "cta": "Continue"
+  },
+  "verify": {
+    "title": "Verification centre",
+    "subtitle": "Verify how we reach you, so you can trade safely.",
+    "later": "Do it later",
+    "backToAccount": "Back to account",
+    "channels": "Contact channels",
+    "email": "Email",
+    "phone": "Phone number",
+    "noPhone": "Not added",
+    "unverified": "Not verified",
+    "changeNumber": "Change number",
+    "verifyEmail": "Verify email",
+    "verifyPhone": "Verify number",
+    "whyPhone": "Your phone number is how the other side's courier — and SafeDeal — reach you during a handover. It isn't only a security check.",
+    "banner": {
+      "action": {
+        "title": "Verify your number to create a deal",
+        "body": "Your email and phone both need verifying before you can create or join a deal. We'll take you straight back once you're done."
+      },
+      "account": {
+        "title": "Keep your account safe",
+        "body": "Verify how we reach you, so you get the alerts that matter and we can get your account back to you if anything goes wrong."
+      }
+    },
+    "summary": {
+      "title": "{count, plural, =1 {1 step left} other {# steps left}}",
+      "body": "{count, plural, =1 {Verify the last channel to unlock creating and joining deals.} other {Verify your email and phone number to unlock creating and joining deals on SafeDeal.}}",
+      "emailOnlyTitle": "Your email is verified",
+      "emailOnlyBody": "While SMS verification isn't available in Thailand, a verified email is enough to create and join deals. We'll ask for your number as soon as it goes live."
+    },
+    "smsUnavailable": {
+      "title": "SMS verification isn't available in Thailand yet",
+      "body": "We're switching SMS on for Thailand. Until then you can keep using SafeDeal with your verified email — only SMS alerts are unavailable.",
+      "badge": "Not supported in your region"
+    },
+    "code": {
+      "back": "Back",
+      "title": "Enter your verification code",
+      "sentToPhone": "We sent a 6-digit code to <d>{destination}</d> by SMS.",
+      "sentToEmail": "We sent a 6-digit code to <d>{destination}</d>.",
+      "label": "6-digit code",
+      "hint": "Enter the 6-digit code you received.",
+      "incorrect": "That code isn't right. Check it and try again.",
+      "expired": "That code has expired. Send yourself a new one.",
+      "rateLimitedTitle": "Too many attempts",
+      "rateLimitedBody": "We've paused verification for a moment to keep your account safe. Try again in about 15 minutes.",
+      "verify": "Verify",
+      "resend": "Send a new code",
+      "resendIn": "until you can send a new code",
+      "wrongNumber": "Wrong number? Change it"
+    },
+    "success": {
+      "title": "You're fully verified",
+      "body": "Your email and phone number are confirmed. You can create and join deals in full.",
+      "returnToAction": "Back to what you were doing",
+      "returnToAccount": "Back to account",
+      "dashboard": "Go to dashboard"
+    },
+    "changePhone": {
+      "back": "Back",
+      "title": "Change your phone number",
+      "body": "Enter the right number and we'll text a code to it straight away.",
+      "label": "Phone number",
+      "hint": "Write it the Thai way, e.g. 081-234-5678 — we save it in the international format.",
+      "savedAs": "Saved as",
+      "send": "Send a code to this number",
+      "addTitle": "Add your phone number",
+      "addBody": "We'll text a code to it straight away to confirm it's yours."
+    },
+    "change": "Change",
+    "addNumber": "Add number"
+  },
+  "payout": {
+    "title": "Connect a payout account",
+    "intro": "SafeDeal pays sellers out through Omise. A deal with no connected payout destination can never complete — connect your bank once, before you create your first deal.",
+    "form": {
+      "accountName": "Account holder name",
+      "accountNameRequired": "Enter the account holder name",
+      "bank": "Bank",
+      "bankPlaceholder": "Choose your bank",
+      "bankRequired": "Choose your bank",
+      "accountNumber": "Account number",
+      "accountNumberHint": "We store only the last four digits.",
+      "accountNumberInvalid": "Enter a valid account number (digits only)",
+      "submit": "Connect bank account"
+    },
+    "rejectedTitle": "Verification failed",
+    "rejectedBody": "Omise couldn't verify the account number and name on file. Double-check your bank details and try again.",
+    "status": {
+      "none": {
+        "badge": "Not connected",
+        "title": "Connect your bank account",
+        "body": "Link a bank account through Omise so we know where to send your payouts.",
+        "cta": "Connect bank account"
+      },
+      "pending": {
+        "badge": "Under review",
+        "title": "Verifying your account",
+        "body": "Omise is reviewing your bank details. This usually takes 1–2 business days.",
+        "cta": "Check status"
+      },
+      "active": {
+        "badge": "Active",
+        "title": "You're ready to sell",
+        "body": "Your payout account is verified. You can now create deals.",
+        "cta": "Go to dashboard"
+      },
+      "rejected": {
+        "badge": "Rejected",
+        "title": "We couldn't verify your account",
+        "body": "Omise rejected the connection — see the reason below and try again.",
+        "cta": "Retry connection"
+      }
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "subtitle": "Everything that's protected, and anything waiting on you — first.",
+    "joinByCode": "Join by code",
+    "createDeal": "Create deal",
+    "createBlocked": "Verify your email and phone, then connect a payout account to create a deal",
+    "stats": {
+      "label": "Dashboard summary",
+      "escrow": "Funds in escrow",
+      "active": "Across {count, plural, =1 {# active deal} other {# active deals}}",
+      "action": "Needs your action",
+      "actionDetail": "Confirmations, shipments and disputes",
+      "completed": "Completed",
+      "completedDetail": "Deals completed successfully"
+    },
+    "actionSection": "What needs your action",
+    "inProgress": "In progress",
+    "viewAllDeals": "View all deals",
+    "actions": {
+      "accept": {
+        "owner": "Buyer action",
+        "title": "Review and accept {title}",
+        "body": "Check the terms before accepting this {amount} deal.",
+        "cta": "Review terms"
+      },
+      "payment": {
+        "owner": "Buyer action",
+        "title": "Fund escrow for {title}",
+        "body": "Pay {amount} into escrow so the seller can proceed safely.",
+        "cta": "Fund escrow"
+      },
+      "receipt": {
+        "owner": "Buyer action",
+        "title": "Confirm you received {title}",
+        "body": "Release {amount} from escrow once the item matches the listing.",
+        "cta": "Review and release"
+      },
+      "seller": {
+        "owner": "Seller action",
+        "title": "Upload proof of delivery · {title}",
+        "body": "Add tracking or a delivery receipt to keep {amount} moving.",
+        "cta": "Add proof"
+      },
+      "dispute": {
+        "owner": "Dispute needs attention",
+        "title": "Respond to the dispute · {title}",
+        "body": "Review the case and submit any evidence before the deadline.",
+        "cta": "Review dispute"
+      }
+    },
+    "escrow": {
+      "label": "Escrow summary",
+      "title": "SafeDeal is looking after your money",
+      "body": "We hold it safely until both sides are happy.",
+      "heldAsBuyer": "Held as buyer",
+      "heldAsSeller": "Held as seller",
+      "needsAction": "Needs your action"
+    },
+    "setup": {
+      "label": "Account setup",
+      "title": "Finish setting up to start getting paid",
+      "body": "{count, plural, =1 {# step left} other {# steps left}} before you can create deals and receive payments.",
+      "complete": "Complete setup"
+    },
+    "tabs": {
+      "all": "All",
+      "buyer": "As buyer",
+      "seller": "As seller",
+      "active": "Active",
+      "completed": "Completed"
+    },
+    "filterLabel": "Filter deals",
+    "search": "Search deals, codes or people",
+    "sortLabel": "Sort",
+    "sort": {
+      "updated": "Latest update",
+      "amount": "Largest amount",
+      "deadline": "Soonest deadline"
+    },
+    "groupAction": "Needs your action",
+    "groupRest": "Everything else",
+    "pageSummary": "Showing {from}–{to} of {total} deals",
+    "paginationLabel": "Deals pages",
+    "previousPage": "Previous",
+    "previousPageAria": "Go to previous deals page",
+    "nextPage": "Next",
+    "nextPageAria": "Go to next deals page",
+    "emptyFilteredTitle": "No deals match those filters",
+    "emptyFilteredBody": "Try a different search or filter to see all your deals.",
+    "clearFilters": "Clear filters",
+    "errorTitle": "Couldn't load your deals",
+    "errorBody": "Something went wrong on the way. Your deals are safe — try loading again.",
+    "provisioningTitle": "Setting up your account",
+    "provisioningBody": "We're finishing your account setup. This usually takes a few seconds — nothing is wrong, and no deal is affected.",
+    "retry": "Try again",
+    "welcome": {
+      "title": "Welcome to SafeDeal",
+      "body": "Trade with anyone, confidently. SafeDeal holds the money in the middle until both sides are happy. Start your first deal.",
+      "step": "Step {n}",
+      "s1Title": "Create or join a deal",
+      "s1Body": "Agree the price and terms with the other side, then open the deal with a short code.",
+      "s2Title": "The buyer pays into escrow",
+      "s2Body": "SafeDeal holds the money safely. The seller ships knowing it's there.",
+      "s3Title": "Release on delivery",
+      "s3Body": "The buyer confirms everything is as described, and the money goes to the seller.",
+      "createFirst": "Create your first deal"
+    },
+    "asBuyer": "as buyer",
+    "asSeller": "as seller",
+    "with": "with {name}",
+    "nav": {
+      "dashboard": "Dashboard",
+      "deals": "Deals",
+      "account": "Account"
+    },
+    "state": {
+      "draft": "Draft",
+      "waiting_buyer_accept": "Waiting for buyer",
+      "ready_for_payment": "Awaiting payment",
+      "funded": "Funds held",
+      "shipped": "In transit",
+      "delivered": "Inspection",
+      "completed": "Completed",
+      "in_dispute": "Disputed",
+      "refunded": "Refunded",
+      "cancelled": "Cancelled",
+      "expired": "Expired"
+    }
+  },
+  "dealsPage": {
+    "title": "Your deals",
+    "subtitle": "Every escrow-protected transaction, with anything that needs you shown first."
+  },
+  "settings": {
+    "title": "Account settings",
+    "navLabel": "Settings sections",
+    "actionRequired": "Action required",
+    "comingSoon": "Coming soon",
+    "retry": "Try again",
+    "sectionErrorTitle": "Couldn't load this section",
+    "sectionErrorBody": "The rest of the page still works. Try loading this section again.",
+    "sections": {
+      "profile": {
+        "nav": "Profile",
+        "title": "Profile",
+        "subtitle": "What the people you trade with see."
+      },
+      "contact": {
+        "nav": "Contact & verification",
+        "title": "Contact & verification",
+        "subtitle": "The email and phone we verify you with and send updates to."
+      },
+      "security": {
+        "nav": "Security",
+        "title": "Security",
+        "subtitle": "Password, two-factor, connected accounts and signed-in devices."
+      },
+      "preferences": {
+        "nav": "Preferences",
+        "title": "Preferences",
+        "subtitle": "Language and email notifications."
+      },
+      "payout": {
+        "nav": "Payouts",
+        "title": "Payouts",
+        "subtitle": "The bank account your money lands in when a sale completes."
+      },
+      "privacy": {
+        "nav": "Privacy & data",
+        "title": "Privacy & data",
+        "subtitle": "Consent, data export and account deletion."
+      },
+      "kyc": {
+        "nav": "Identity (KYC)",
+        "title": "Identity verification (KYC)",
+        "subtitle": "Buyer-side identity checks."
+      }
+    },
+    "profile": {
+      "photo": "Profile photo",
+      "photoHint": "PNG or JPG, up to 4MB — without one we use your initials.",
+      "upload": "Upload photo",
+      "uploading": "Uploading…",
+      "removePhoto": "Remove",
+      "removingPhoto": "Removing…",
+      "photoUpdated": "Profile photo updated",
+      "photoRemoved": "Profile photo removed",
+      "displayName": "Display name",
+      "displayNamePlaceholder": "The name your counterparty sees",
+      "noName": "Not set",
+      "nameRequired": "Enter a display name before saving.",
+      "imageTooLarge": "That image is over 4MB. Pick a smaller one.",
+      "memberSince": "Member since",
+      "saved": "Changes saved"
+    },
+    "contact": {
+      "email": "Email",
+      "phone": "Phone number",
+      "noPhone": "Not added",
+      "unverified": "Not verified",
+      "change": "Change",
+      "verifyPhone": "Verify number",
+      "wrongNumber": "Typed the wrong number? \"Verify number\" or \"Change\" both take you to the verification centre, where you can fix it any time."
+    },
+    "security": {
+      "password": "Password",
+      "noPassword": "Not set — you sign in with a connected account",
+      "changePassword": "Change password",
+      "twoFactor": "Two-factor authentication (2FA)",
+      "twoFactorHint": "Add a code from an authenticator app on top of your password.",
+      "enabled": "On",
+      "notEnabled": "Off",
+      "enable": "Turn on",
+      "google": "Google account",
+      "googleHint": "Connect Google to sign in faster with one click.",
+      "connectedTo": "Connected to {account}",
+      "connected": "Connected",
+      "notConnected": "Not connected",
+      "connectGoogle": "Connect Google",
+      "connectingGoogle": "Connecting…",
+      "disconnectGoogle": "Disconnect",
+      "disconnectingGoogle": "Disconnecting…",
+      "googleErrorTitle": "Google connection failed",
+      "googleConnectionUnavailable": "Google did not return a secure connection link. Please try again.",
+      "devices": "Signed-in devices",
+      "devicesHint": "Sign out anything you don't recognise, straight away.",
+      "signOutEverywhere": "Sign out everywhere",
+      "signOutDevice": "Sign out",
+      "thisDevice": "This device",
+      "activeNow": "Active now"
+    },
+    "preferences": {
+      "language": "Language",
+      "languageHint": "Applies to the app and the emails we send you.",
+      "emailTitle": "Email notifications",
+      "dealUpdates": {
+        "label": "Deal and payment updates",
+        "hint": "When a deal changes state or something needs you."
+      },
+      "weeklyDigest": {
+        "label": "Weekly summary",
+        "hint": "An overview of your deals, every Monday."
+      },
+      "product": {
+        "label": "News and offers",
+        "hint": "New features and the occasional promotion."
+      },
+      "security": {
+        "label": "Security alerts",
+        "hint": "New sign-ins and important changes — always on."
+      }
+    },
+    "payout": {
+      "status": {
+        "none": {
+          "title": "No payout account yet",
+          "badge": "Not connected",
+          "body": "Connect a bank account so we know where to send your money — it also unlocks creating deals.",
+          "cta": "Set up payouts"
+        },
+        "pending": {
+          "title": "Checking your account",
+          "badge": "Under review",
+          "body": "This usually takes 1–2 business days. We'll tell you as soon as it's done.",
+          "cta": "Check status"
+        },
+        "active": {
+          "title": "Payout account connected",
+          "badge": "Ready",
+          "body": "Money reaches this account within one business day of being released from escrow.",
+          "cta": "Manage account"
+        },
+        "rejected": {
+          "title": "Verification failed",
+          "badge": "Rejected",
+          "body": "This account can't receive payouts yet. Fix the details below and submit it again.",
+          "cta": "Fix and resubmit"
+        }
+      },
+      "reason": "Reason",
+      "reasonUnknown": "Omise didn't give a reason. Contact support and we'll chase it.",
+      "history": "Payout history",
+      "historyHint": "Every transfer we've made to your bank account.",
+      "viewHistory": "View history",
+      "historySoon": "Payout history arrives with the transfers backend.",
+      "dialog": {
+        "connectTitle": "Connect your payout account",
+        "connectBody": "Link a Thai bank account through Omise so we know where to send your payouts.",
+        "manageTitle": "Payout account",
+        "replaceNote": "Need to change your bank? Contact support — self-service replacement is coming soon."
+      }
+    },
+    "privacy": {
+      "consent": "Data consent (PDPA)",
+      "consentValue": "Version {version} · accepted {date}",
+      "consentMissing": "No consent record on this account",
+      "consentGiven": "Accepted",
+      "consentUnknown": "Unknown",
+      "viewDocuments": "View documents",
+      "export": "Request a copy of your data",
+      "exportHint": "We'll gather everything we hold and email you a download link within 24 hours.",
+      "requestExport": "Request export",
+      "dangerZone": "Danger zone · delete account",
+      "deleteHint": "Deleting your account is permanent and can't be undone. Your deal history and personal data are erased.",
+      "deleteAccount": "Delete my account",
+      "blockedTitle": "You can't delete your account yet",
+      "blockedBody": "SafeDeal is holding money for {count, plural, =1 {# deal} other {# deals}}, {total} in total. Those have to complete or be refunded first — we're keeping the account so your money has somewhere to come back to.",
+      "close": "Close",
+      "goToDeals": "Go to my deals",
+      "confirmTitle": "Delete your account?",
+      "confirmBody": "Your account, your whole deal history and your personal data are erased permanently. This can't be undone.",
+      "deletePermanently": "Delete permanently"
+    },
+    "kyc": {
+      "title": "Identity verification for buyers (KYC)",
+      "body": "Coming soon, to raise your limits and unlock high-value deals.",
+      "comingSoon": "Coming soon"
+    }
+  },
+  "dealPolicy": {
+    "errorTitle": "Pricing is temporarily unavailable",
+    "errorBody": "We couldn't load SafeDeal's current fee policy. Try again before continuing.",
+    "retry": "Try loading pricing again"
+  },
+  "dealFlow": {
+    "create": {
+      "title": "Create a deal",
+      "subtitle": "Set the item, delivery and protection terms your buyer will accept.",
+      "progressLabel": "Create deal progress",
+      "blockedTitle": "Finish your seller setup first",
+      "blockedBody": "Your email and phone must be verified and your payout account must be active before you can create a deal.",
+      "verifyCta": "Complete verification",
+      "payoutCta": "Set up payouts",
+      "steps": {
+        "item": "Item",
+        "terms": "Price & shipping",
+        "protection": "Protection",
+        "review": "Review"
+      },
+      "step": "Step {current} of 4",
+      "itemTitle": "Describe the item",
+      "itemBody": "These details become part of the accepted deal terms.",
+      "titleLabel": "Item title",
+      "titlePlaceholder": "For example: Nikon Z6 II camera body",
+      "descriptionLabel": "Description",
+      "descriptionPlaceholder": "Condition, accessories, and anything else the buyer should know.",
+      "agreementLabel": "Deal terms",
+      "agreementHint": "Write any promises, limits, warranty, or return expectations the buyer must agree to.",
+      "agreementPlaceholder": "For example: No warranty. Returns accepted within 3 days if the item does not match this description.",
+      "required": "This information is required.",
+      "uploadLabel": "Add private product photos or documents",
+      "uploadHint": "Drag files here or click to browse",
+      "uploadConstraints": "JPG, PNG or PDF · up to 10 MB each · 10 files",
+      "uploadPrivacy": "Files stay private and are uploaded only when you create the deal.",
+      "fileSelected": "Selected",
+      "removeFile": "Remove file",
+      "termsTitle": "Set price and shipping",
+      "termsBody": "The buyer pays the agreed item amount. SafeDeal deducts its fee from your payout.",
+      "priceLabel": "Price",
+      "priceError": "Enter a valid amount with no more than two decimal places.",
+      "carrierLabel": "Preferred carrier",
+      "buyerPays": "Buyer pays",
+      "sellerFee": "SafeDeal seller fee · {percent}",
+      "youReceive": "You receive after completion",
+      "escrowAlertTitle": "Protected by SafeDeal",
+      "escrowAlertBody": "SafeDeal holds the buyer's payment and starts your payout only after the buyer confirms receipt and accepts the item.",
+      "protectionTitle": "Set buyer protection",
+      "protectionBody": "Review the recorded agreement and how SafeDeal releases the held payment.",
+      "recordedTermsTitle": "Recorded deal terms",
+      "recordedTermsBody": "These are the return, warranty, and item promises the buyer will accept.",
+      "automaticReleaseTitle": "Release after acceptance",
+      "automaticReleaseBody": "After the buyer confirms receipt and accepts the item, SafeDeal begins processing your payout. The completed deal remains recorded for both participants.",
+      "heldTitle": "Payment is held",
+      "heldBody": "The seller is not paid when the buyer funds the deal.",
+      "shipTitle": "Ship only after funding",
+      "shipBody": "Delivery details are revealed to the seller only after payment succeeds.",
+      "releaseTitle": "The buyer authorizes release",
+      "releaseBody": "Payment is released only after the buyer confirms receipt and accepts the item.",
+      "previewMedia": "Preview images and media",
+      "previewFile": "Preview {name}",
+      "mediaDialogTitle": "Images and media preview",
+      "closeMediaPreview": "Close media preview",
+      "previousMedia": "Previous",
+      "nextMedia": "Next",
+      "mediaPosition": "{current} of {total}",
+      "reviewTitle": "Review and create",
+      "reviewBody": "Confirm everything looks right. Your buyer will accept these exact terms.",
+      "reviewItemTitle": "Item",
+      "reviewShippingTitle": "Price & shipping",
+      "reviewProtectionTitle": "Protection",
+      "mediaLabel": "Images & media",
+      "filesSelected": "{count, plural, =0 {No files} one {# file} other {# files}}",
+      "notProvided": "Not provided",
+      "paymentProtectionLabel": "Payment",
+      "releaseProtectionLabel": "Release",
+      "confirmationTitle": "These details are accurate",
+      "confirmationBody": "I understand the buyer accepts these terms and funds stay held until delivery and item acceptance are confirmed.",
+      "confirmationError": "Confirm the details are accurate before creating the deal.",
+      "validationTitle": "Some details need attention",
+      "validationBody": "Fix the highlighted fields before continuing.",
+      "createCta": "Create deal",
+      "createdToast": "Deal created",
+      "errorToast": "We couldn't create the deal. Check the details and try again.",
+      "waitingBadge": "Waiting for buyer",
+      "shareTitle": "Share this private deal",
+      "shareBody": "Send the code or link to your buyer. Do not ship until SafeDeal confirms payment.",
+      "privateCode": "Private deal code",
+      "copyCode": "Copy",
+      "copiedCode": "Deal code copied",
+      "copied": "Invitation link copied",
+      "copiedShort": "Copied!",
+      "copyFailed": "Couldn't copy the invitation. Select it and copy it manually.",
+      "copyLink": "Copy invitation link",
+      "openDeal": "Open deal room",
+      "backToDeals": "Back to deals",
+      "whatNext": "What happens next",
+      "nextTimelineLabel": "Next steps for this deal",
+      "now": "Now",
+      "nextCreated": "Deal created and terms locked",
+      "nextBuyer": "Buyer joins and pays into escrow",
+      "nextBuyerBody": "They open your link, accept the terms, and fund the held amount.",
+      "nextFunded": "SafeDeal confirms payment",
+      "nextShip": "You ship the item",
+      "nextDelivery": "Buyer confirms delivery",
+      "nextPayout": "Payout released to you"
+    },
+    "join": {
+      "title": "Join a private deal",
+      "subtitle": "Review everything before you accept or pay.",
+      "findTitle": "Join a private deal",
+      "findBody": "Enter the deal code your seller sent you. We'll pull up the full details for you to review.",
+      "enterHint": "Press <key>Enter</key> to continue",
+      "escrowFootnote": "Payments are held in SafeDeal escrow until you confirm",
+      "progressLabel": "Join progress",
+      "blockedTitle": "Complete verification first",
+      "blockedBody": "Your email and phone must be verified before you can view or join a private deal.",
+      "verifyCta": "Complete verification",
+      "steps": {
+        "review": "Deal review",
+        "protection": "Protection",
+        "delivery": "Delivery",
+        "accept": "Accept"
+      },
+      "reviewTitle": "Find and review the deal",
+      "reviewBody": "Enter the code the seller sent you.",
+      "codeLabel": "Deal code",
+      "findCta": "Find deal",
+      "codeError": "Enter a valid SD- deal code.",
+      "notFound": "We couldn't find an available deal with that code.",
+      "rateLimited": "Too many lookups. Wait a moment and try again.",
+      "foundToast": "Deal found",
+      "selfJoinTitle": "You created this deal",
+      "selfJoinBody": "A seller cannot join their own deal as the buyer. Open your deal room to manage or share it.",
+      "openOwnDeal": "Open my deal room",
+      "privateBadge": "Private deal",
+      "agreement": "Deal terms",
+      "seller": "Seller",
+      "shipping": "Shipping",
+      "price": "Agreed price",
+      "itemValue": "Item value",
+      "days": "{count} days",
+      "aside": {
+        "title": "You're protected",
+        "escrowTitle": "Money held in escrow",
+        "escrowBody": "The seller can't touch your payment until you confirm the item.",
+        "inspectTitle": "Inspect before it's released",
+        "inspectBody": "You get time to check the item after it arrives.",
+        "disputeTitle": "Help if it goes wrong",
+        "disputeBody": "Open a dispute and a SafeDeal admin reviews it.",
+        "feeNote": "Buyers pay no fee — the seller covers SafeDeal's {percent}."
+      },
+      "protectionTitle": "Payment and protection",
+      "protectionBody": "You pay only the agreed amount; the seller pays SafeDeal's {percent} fee.",
+      "heldTitle": "Your payment is held by SafeDeal",
+      "heldBody": "The seller does not receive the money when you pay.",
+      "inspectTitle": "Inspect before release",
+      "inspectBody": "After confirming delivery, you have {days} days to inspect the item.",
+      "releaseTitle": "Acceptance authorizes release",
+      "releaseBody": "Accept only after the item matches the recorded terms.",
+      "deliveryTitle": "Where should the seller ship?",
+      "deliveryBody": "SafeDeal reveals these details to the seller only after your payment succeeds.",
+      "receiverLabel": "Receiver name",
+      "phoneLabel": "Phone number",
+      "addressLabel": "Delivery address",
+      "privacyNote": "Your delivery details are encrypted and are not shown in the invitation preview.",
+      "acceptTitle": "Accept the deal terms",
+      "acceptBody": "This locks the current revision for both participants.",
+      "checkboxTitle": "I reviewed and accept these deal terms",
+      "checkboxBody": "I understand when SafeDeal holds and releases the item amount.",
+      "changeSoon": "Request a change · coming later",
+      "acceptCta": "Accept and join",
+      "acceptError": "Complete the delivery details and accept the terms.",
+      "changedError": "The deal changed or another buyer joined it. Review it again.",
+      "submitError": "We couldn't join the deal. Try again.",
+      "joinedToast": "Deal accepted. Continue to payment."
+    }
+  },
+  "deal": {
+    "kicker": "Shared deal",
+    "subtitle": "One shared transaction, shown from each participant's perspective.",
+    "viewingAs": "Viewing as {role}",
+    "buyer": "buyer",
+    "seller": "seller",
+    "buyingFrom": "Buying from {name}",
+    "sellingTo": "Selling to {name}",
+    "itemAmount": "Item amount",
+    "notFound": "Deal not found",
+    "notFoundBody": "No deal matches the code {code}. Check the code with the other party.",
+    "timelineLabel": "Deal timeline",
+    "history": {
+      "title": "Deal history",
+      "subtitle": "Every step, in order.",
+      "hide": "Hide",
+      "show": "Show",
+      "empty": "No events yet.",
+      "inProgress": "In progress"
+    },
+    "timelineEvents": {
+      "created": "Deal created",
+      "shared": "Invitation shared",
+      "terms_accepted": "Buyer accepted terms",
+      "funded": "Payment secured",
+      "shipped": "Shipment confirmed",
+      "receipt_confirmed": "Buyer confirmed receipt",
+      "completed": "Buyer accepted item",
+      "transfer_processing": "Seller transfer processing",
+      "seller_paid": "Seller paid",
+      "refund_requested": "Refund requested",
+      "refund_manual": "Refund being processed",
+      "refund_failed": "Refund failed",
+      "refunded": "Buyer refunded",
+      "buyer_refunded": "Buyer refunded",
+      "auto_released": "Auto-released after inspection",
+      "expired": "Deal expired",
+      "transfer_failed": "Payout failed",
+      "payment_failed": "Payment failed",
+      "dispute_opened": "Dispute opened",
+      "dispute_under_review": "Dispute under review",
+      "dispute_resolved_buyer": "Resolved for buyer",
+      "dispute_resolved_seller": "Resolved for seller",
+      "dispute_cancelled": "Dispute withdrawn"
+    },
+    "held": {
+      "label": "Held by SafeDeal",
+      "body": "The seller has not received this money.",
+      "releasedLabel": "Release authorized",
+      "releasedBody": "Seller transfer has not completed."
+    },
+    "stages": {
+      "payment": "Payment",
+      "funded": "Funds held",
+      "shipping": "Shipping",
+      "delivery": "Delivery",
+      "inspection": "Inspection",
+      "release": "Release",
+      "transfer": "Transfer",
+      "complete": "Complete"
+    },
+    "badge": {
+      "yourAction": "Your action",
+      "buyerAction": "Buyer action",
+      "sellerAction": "Seller action",
+      "held": "Held by SafeDeal",
+      "inTransit": "In transit",
+      "buyerWaiting": "Buyer is waiting",
+      "buyerInspection": "Buyer inspection",
+      "releaseAuthorized": "Release authorized",
+      "transferProcessing": "Omise transfer processing"
+    },
+    "pay": {
+      "title": "Pay {amount} securely",
+      "body": "The seller pays SafeDeal's platform fee. It is not added to your payment.",
+      "itemPrice": "Item price",
+      "buyerFee": "Buyer fee",
+      "total": "Total charged today",
+      "ctaPromptPay": "Pay with PromptPay",
+      "ctaCard": "Pay with card",
+      "unavailable": "Payments are temporarily unavailable. Please try again later.",
+      "waitingTitle": "Waiting for buyer payment",
+      "waitingBody": "Do not ship yet. You will be notified after SafeDeal confirms the payment."
+    },
+    "ship": {
+      "waitingTitle": "Waiting for {name} to ship",
+      "waitingBody": "The seller has not received {amount}. We will notify you when tracking is added.",
+      "actionTitle": "Ship the item and add tracking",
+      "actionBody": "{amount} is held by SafeDeal. Add tracking by {deadline}.",
+      "prepareCta": "Prepare shipment",
+      "preparingTitle": "{name} is preparing the shipment",
+      "preparingBody": "No action is required. The item amount remains held by SafeDeal.",
+      "detailsTitle": "Add shipment details",
+      "carrierLabel": "Carrier",
+      "trackingLabel": "Tracking number",
+      "trackingRequired": "Add the tracking number before confirming.",
+      "uploadTitle": "Add photos or documents",
+      "uploadHint": "JPG, PNG or PDF",
+      "uploadConstraints": "Up to 3 files · 10 MB each",
+      "removeFile": "Remove file",
+      "confirmCta": "Confirm shipment"
+    },
+    "track": {
+      "title": "Track your delivery",
+      "carrier": "Carrier",
+      "trackingNumber": "Tracking number",
+      "latestUpdate": "Latest update",
+      "inspection": "Inspection",
+      "inspectionBegins": "Begins after confirmed delivery",
+      "inTransitEvent": "Shipment is in transit",
+      "receivedCta": "Confirm received",
+      "sellerTitle": "Shipment is in transit",
+      "sellerBody": "Adding tracking did not release the money. No seller action is required."
+    },
+    "inspect": {
+      "title": "Inspect the item before releasing funds",
+      "body": "Compare the item with the accepted terms. Accepting authorizes SafeDeal to transfer the seller's payout.",
+      "agreement": "Agreed deal terms",
+      "deadline": "Inspection deadline",
+      "acceptCta": "Accept item",
+      "problemCta": "Report a problem",
+      "sellerTitle": "{name} is inspecting the item",
+      "sellerBody": "The item amount remains held. You will be notified when the buyer accepts or reports a problem."
+    },
+    "release": {
+      "buyerTitle": "SafeDeal is preparing the seller transfer",
+      "buyerBody": "You authorized {amount} for {name}. The deal is not complete yet.",
+      "sellerTitle": "Your payout is being prepared",
+      "sellerBody": "{name} accepted the item. SafeDeal will transfer {amount} after final processing."
+    },
+    "transfer": {
+      "buyerTitle": "The seller has not been paid yet",
+      "buyerBody": "SafeDeal is transferring {amount} to the seller's verified bank account.",
+      "sellerTitle": "{amount} is on the way",
+      "sellerBody": "Destination: {destination}. No action is required."
+    },
+    "complete": {
+      "title": "Deal completed",
+      "body": "{amount} was transferred to {name}. No further action is required.",
+      "timelineLabel": "Deal completion timeline",
+      "buyerPaid": "Buyer paid",
+      "itemAmount": "Item amount",
+      "platformFee": "SafeDeal seller fee",
+      "sellerReceived": "Seller received",
+      "timeline": {
+        "paid": "Payment secured",
+        "shipped": "Item shipped and delivered",
+        "accepted": "Buyer accepted item",
+        "payout": "Seller paid"
+      }
+    },
+    "edge": {
+      "disputed": {
+        "badge": "In dispute",
+        "title": "An admin is reviewing this dispute",
+        "body": "Funds remain frozen at the state they were in when the dispute opened. Neither party can act until an admin resolves it."
+      },
+      "refunded": {
+        "badge": "Refunded",
+        "title": "Deal refunded",
+        "body": "The item amount was returned to the buyer. This deal is now closed."
+      },
+      "cancelled": {
+        "badge": "Cancelled",
+        "title": "Deal cancelled",
+        "body": "Ended before payment — no funds ever moved."
+      },
+      "expired": {
+        "badge": "Expired",
+        "title": "Deal expired",
+        "body": "A deadline lapsed before the deal progressed. The seller can renew to reopen it.",
+        "cta": "Renew deal"
+      }
+    },
+    "dialog": {
+      "qrTitle": "Scan to pay with PromptPay",
+      "qrBody": "Open your banking app and scan this QR code to pay. SafeDeal holds the money until you confirm the item.",
+      "qrWaiting": "Waiting for payment… this closes automatically once it's confirmed.",
+      "qrStay": "Keep this page open. Do not close or refresh until your payment is confirmed.",
+      "qrCancel": "Cancel and pay later",
+      "payTitle": "Pay with PromptPay",
+      "payConsequence": "You'll be taken to PromptPay to complete the payment. SafeDeal holds the money until you confirm the item.",
+      "payConfirm": "Continue to PromptPay",
+      "acceptTitle": "Accept the item and release funds?",
+      "acceptConsequence": "Only continue if the item matches the accepted terms. SafeDeal will be authorized to transfer {amount} to {name}.",
+      "acceptConfirm": "Accept and authorize release",
+      "receiptTitle": "Confirm you received the item?",
+      "receiptConsequence": "This starts your inspection period. It does not release the money yet.",
+      "receiptConfirm": "Confirm received",
+      "refundTitle": "Refund the buyer?",
+      "refundConsequence": "This returns {amount} to {name} and closes the deal. The money leaves escrow and the deal cannot continue.",
+      "refundConfirm": "Refund buyer"
+    },
+    "refund": {
+      "title": "Refund the buyer",
+      "body": "Return the full amount to the buyer and close this deal. Use this when you cannot fulfil it.",
+      "cta": "Refund buyer"
+    },
+    "paymentFailed": {
+      "title": "Your last payment did not go through",
+      "body": "The payment was declined or expired. No money was taken — please try again below."
+    },
+    "payoutFailed": {
+      "title": "Payout could not be sent",
+      "body": "The seller's bank rejected the payout. SafeDeal is holding the funds safely and will retry once the payout account is fixed — no money is lost."
+    },
+    "refundState": {
+      "pending": {
+        "title": "Refund in progress",
+        "body": "The money is being returned to the buyer. This deal is on hold until the refund completes."
+      },
+      "failed": {
+        "title": "Refund needs attention",
+        "body": "We couldn't return the money automatically. Our team has been alerted and will resolve it — no money is lost."
+      }
+    },
+    "toast": {
+      "updatedTitle": "Status updated",
+      "updatedBody": "The shared deal record now shows the next stage.",
+      "shipmentTitle": "Shipment confirmed",
+      "shipmentBody": "The buyer can now track the delivery.",
+      "releaseTitle": "Release authorized",
+      "releaseBody": "SafeDeal is preparing the seller transfer.",
+      "evidenceTitle": "Files attached",
+      "evidenceBody": "They'll be sent with the shipment details.",
+      "disputeSoonTitle": "Not available yet",
+      "disputeSoonBody": "The dispute flow lands in a later release.",
+      "failedTitle": "Action failed",
+      "failedBody": "The shared deal was not changed. Try again.",
+      "laterTitle": "Coming later",
+      "laterBody": "This action is not part of the current happy path.",
+      "refundTitle": "Refund started",
+      "refundBody": "The buyer will be refunded the full amount. This deal is now closed."
+    }
+  },
+  "payReturn": {
+    "title": "Confirming your payment",
+    "body": "Hold on — we're taking you back to your deal."
+  }
+}

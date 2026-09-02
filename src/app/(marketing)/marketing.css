@@ -15,8 +15,29 @@
   --held: #b9861f;
   --hair: color-mix(in srgb, var(--foreground) 8%, transparent);
   --ease: cubic-bezier(0.23, 1, 0.32, 1);
+  /* Landing-only palette. The design-system tokens stay muted for app chrome; the marketing page
+   * layers a brighter "energy" green (--brand) for glows and a deep near-black green anchor
+   * (--ink-deep) so the scroll journey reads light → dark → light instead of one flat green wash. */
+  --brand-bright: var(--brand, #1ab386);
+  --glow-lime: #35d69a;
+  --warm: #e0a13a;         /* problem-zone tension accent (amber family, matches --held) */
+  --ink-deep: #06130d;     /* dark cinematic anchor ground */
+  --ink-deep-2: #0a2419;   /* dark anchor highlight */
 }
-.sd-landing { background: var(--background); color: var(--foreground); }
+.sd-landing {
+  background:
+    radial-gradient(120% 82% at 50% -8%, color-mix(in srgb, var(--brand-bright) 22%, var(--background)), transparent 52%),
+    radial-gradient(90% 60% at 85% 8%, color-mix(in srgb, var(--info) 11%, transparent), transparent 55%),
+    linear-gradient(180deg, color-mix(in srgb, var(--primary) 5%, var(--background)), var(--background) 38%);
+  color: var(--foreground); }
+/* Fine film grain over the whole page — kills the "empty flat CSS" look, a 2026 staple. Sits under
+ * content (z 0) and never eats pointer events. */
+.sd-landing::before {
+  content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: .5; mix-blend-mode: soft-light;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.sd-landing > * { position: relative; z-index: 1; }
+@media (prefers-reduced-motion: reduce) { .sd-landing::before { display: none; } }
 .sd-wrap { max-width: var(--maxw); margin: 0 auto; padding-inline: var(--gutter); }
 
 /* ---------- reveal (styles the shared <Reveal> component's .sd-reveal) ---------- */
@@ -69,16 +90,26 @@
 
 /* ---------- hero (centered, full-screen, animated mesh background) ---------- */
 .sd-hero { position: relative; overflow: hidden; min-height: 100svh; display: grid; place-items: center;
-  text-align: center; padding: calc(66px + 5vh) var(--gutter) 8vh; }
+  text-align: center; padding: calc(66px + 5vh) var(--gutter) 8vh;
+  background:
+    radial-gradient(115% 80% at 78% 12%, color-mix(in srgb, var(--brand-bright) 12%, transparent), transparent 55%),
+    radial-gradient(90% 70% at 12% 88%, color-mix(in srgb, var(--info) 9%, transparent), transparent 55%);
+  /* soft fade into the problem zone below */
+  border-bottom: 1px solid transparent; }
+.sd-hero::after { content: ""; position: absolute; inset: auto 0 0 0; height: 22vh; z-index: 0; pointer-events: none;
+  background: linear-gradient(to bottom, transparent, color-mix(in srgb, var(--warm) 4%, var(--background))); }
 .sd-hero__wrap { position: relative; z-index: 1; max-width: 940px; margin: 0 auto; }
-.sd-mesh { position: absolute; inset: -10% ; z-index: 0; pointer-events: none; filter: blur(60px) saturate(1.05); opacity: .9; }
+.sd-mesh { position: absolute; inset: -10% ; z-index: 0; pointer-events: none; filter: blur(54px) saturate(1.4); opacity: 1; }
 .sd-mesh span { position: absolute; border-radius: 50%; }
-.sd-mesh .m1 { width: 46vw; height: 46vw; top: -6%; right: -4%;
-  background: radial-gradient(closest-side, color-mix(in srgb, var(--primary) 30%, transparent), transparent 70%); }
-.sd-mesh .m2 { width: 42vw; height: 42vw; bottom: -12%; left: -6%;
-  background: radial-gradient(closest-side, color-mix(in srgb, var(--info) 16%, transparent), transparent 70%); }
-.sd-mesh .m3 { width: 34vw; height: 34vw; top: 30%; left: 32%;
-  background: radial-gradient(closest-side, color-mix(in srgb, var(--primary) 18%, transparent), transparent 72%); }
+.sd-mesh .m1 { width: 56vw; height: 56vw; top: -14%; right: -10%;
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--brand-bright) 62%, transparent), transparent 78%); }
+.sd-mesh .m2 { width: 50vw; height: 50vw; bottom: -18%; left: -10%;
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--info) 34%, transparent), transparent 78%); }
+.sd-mesh .m3 { width: 42vw; height: 42vw; top: 22%; left: 28%;
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--glow-lime) 42%, transparent), transparent 78%); }
+/* warm counter-glow so the hero isn't monochrome green — a small amber pool, bottom-right */
+.sd-mesh::after { content: ""; position: absolute; width: 34vw; height: 34vw; bottom: -6%; right: 8%;
+  border-radius: 50%; background: radial-gradient(closest-side, color-mix(in srgb, var(--warm) 20%, transparent), transparent 72%); }
 @media (prefers-reduced-motion: no-preference) {
   .sd-mesh .m1 { animation: sdMesh1 22s ease-in-out infinite; }
   .sd-mesh .m2 { animation: sdMesh2 28s ease-in-out infinite; }
@@ -139,9 +170,14 @@
 
 /* Phone frame holding the held-deal mock. Bezel is a marketing device, not app chrome: fixed dark
  * value, no token equivalent. Everything inside reuses the deal-card classes (rail/pill/reassure). */
-.sd-phone__frame { width: min(330px, 82vw); background: #0f1113; border-radius: 44px; padding: 11px;
-  box-shadow: 0 30px 70px -30px rgba(21,27,24,.45), 0 8px 24px -12px rgba(21,27,24,.25); }
-.sd-phone__screen { position: relative; border-radius: 34px; overflow: hidden; background: var(--background); aspect-ratio: 9 / 19.2; }
+/* Space-grey iPhone: the metal rail, black bezel, island and buttons are the <PhoneFrame> SVG
+ * overlay (.sd-phone__device); the live app sits in .sd-phone__screen behind its transparent screen
+ * cutout. The frame box carries only the device silhouette (radius) and drop shadow. */
+.sd-phone__frame { position: relative; width: min(330px, 82vw); aspect-ratio: 9 / 19.2;
+  border-radius: 15.5% / 7.3%;
+  box-shadow: 0 54px 108px -36px rgba(21,27,24,.55), 0 18px 42px -16px rgba(21,27,24,.34); }
+.sd-phone__device { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 3; pointer-events: none; display: block; }
+.sd-phone__screen { position: absolute; inset: 1.4% 3.2%; z-index: 1; border-radius: 36px; overflow: hidden; background: var(--background); }
 /* Content runs past the fold like a real screen; fade the cut so it reads as "more below". */
 .sd-phone__screen::after { content: ""; position: absolute; inset: auto 0 0 0; height: 70px; pointer-events: none;
   background: linear-gradient(to bottom, transparent, var(--background)); }
@@ -156,8 +192,6 @@
   padding: 13px 22px 7px; background: var(--card); color: var(--foreground); }
 .sd-phone__time { font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; letter-spacing: .01em; }
 .sd-phone__sig { display: inline-flex; align-items: center; gap: 6px; }
-.sd-phone__island { position: absolute; top: 12px; left: 50%; transform: translateX(-50%); z-index: 6;
-  width: 74px; height: 20px; background: #0b0d0f; border-radius: 999px; }
 
 @media (max-width: 1100px) {
   .sd-hero--split { text-align: center; }
@@ -176,7 +210,10 @@
 .sd-blk { padding: clamp(56px, 8vw, 110px) 0; position: relative; }
 
 /* ---------- problem: one problem per pinned full screen ---------- */
-.sd-pscene { position: relative; height: 200vh; background: var(--card); }
+.sd-pscene { position: relative; height: 200vh;
+  background:
+    radial-gradient(90% 65% at 50% 40%, color-mix(in srgb, var(--warm) 7%, var(--card)), color-mix(in srgb, var(--muted) 55%, var(--card)) 80%);
+  box-shadow: inset 0 1px 90px -20px color-mix(in srgb, var(--warm) 30%, transparent); }
 .sd-pscene + .sd-pscene { border-top: 1px solid var(--hair); }
 .sd-pscene__sticky { position: sticky; top: 0; height: 100vh; display: flex; align-items: center; overflow: hidden; }
 .sd-pscene__grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(30px, 6vw, 80px); align-items: center; width: 100%; }
@@ -192,14 +229,51 @@
 .sd-pimg { aspect-ratio: 4 / 3; border-radius: calc(var(--radius, 12px) + 8px); overflow: hidden;
   background: color-mix(in srgb, var(--accent) 60%, var(--card)); box-shadow: var(--shadow-sm, 0 1px 3px rgba(21,27,24,.08)); border: 1px solid var(--hair); }
 .sd-pimg img { width: 100%; height: 100%; object-fit: cover; display: block; will-change: transform; }
-.sd-presolve { padding: clamp(60px, 11vw, 130px) 0; text-align: center; background: var(--background);
-  border-top: 1px solid var(--hair); border-bottom: 1px solid var(--hair); }
-.sd-presolve p { font-size: clamp(24px, 3.6vw, 42px); letter-spacing: -.025em; font-weight: 700; max-width: 20ch; margin: 0 auto; }
-.sd-presolve .g { color: var(--primary); }
-.sd-presolve p { will-change: transform, opacity; }
+/* The emotional pivot ("neither of you goes first") — the page's darkest, most cinematic beat.
+ * Deep green-black ground with a central green glow throws the white line into relief; the accent
+ * word lights up in bright brand green. Bookends with the final CTA. */
+.sd-presolve { position: relative; overflow: hidden; padding: clamp(90px, 15vw, 180px) 0; text-align: center;
+  background:
+    radial-gradient(72% 92% at 50% 50%, color-mix(in srgb, var(--brand-bright) 30%, var(--ink-deep)), transparent 70%),
+    linear-gradient(180deg, var(--ink-deep-2), var(--ink-deep) 55%);
+  color: #f4fbf7; border-top: 1px solid color-mix(in srgb, var(--brand-bright) 22%, transparent); border-bottom: 1px solid color-mix(in srgb, var(--brand-bright) 22%, transparent); }
+.sd-presolve::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .35;
+  background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+  background-size: 46px 46px; -webkit-mask-image: radial-gradient(62% 70% at 50% 50%, #000, transparent); mask-image: radial-gradient(62% 70% at 50% 50%, #000, transparent); }
+.sd-presolve p { position: relative; font-size: clamp(26px, 4vw, 48px); letter-spacing: -.03em; font-weight: 700; line-height: 1.15; max-width: 22ch; margin: 0 auto; text-wrap: balance;
+  will-change: transform, opacity; }
+.sd-presolve .g { color: var(--glow-lime); text-shadow: 0 0 34px color-mix(in srgb, var(--brand-bright) 60%, transparent); }
+
+/* ---------- happy payoff — the bright exhale right after the dark pivot ---------- */
+.sd-happy { position: relative; overflow: hidden; padding: clamp(72px, 10vw, 132px) 0;
+  background:
+    radial-gradient(80% 60% at 50% -8%, color-mix(in srgb, var(--brand-bright) 12%, transparent), transparent 60%),
+    linear-gradient(180deg, color-mix(in srgb, var(--brand-bright) 7%, var(--card)), var(--background) 62%);
+  border-bottom: 1px solid var(--hair); }
+.sd-happy__head { text-align: center; max-width: 620px; margin: 0 auto; }
+.sd-happy__head .sd-kicker { justify-content: center; }
+.sd-happy__head .sd-kicker::before { display: none; }
+.sd-happy__head .sd-lead { margin-inline: auto; }
+.sd-happy__grid { margin-top: clamp(34px, 5vw, 60px); display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(18px, 2vw, 26px); }
+.sd-happy__card { margin: 0; display: flex; flex-direction: column; }
+.sd-happy__img { aspect-ratio: 3 / 2; border-radius: calc(var(--radius, 12px) + 6px); overflow: hidden;
+  background: color-mix(in srgb, var(--accent) 60%, var(--card)); border: 1px solid var(--hair);
+  box-shadow: 0 26px 54px -28px color-mix(in srgb, var(--primary) 40%, rgba(21,27,24,.4));
+  transition: transform .4s var(--ease), box-shadow .4s var(--ease); }
+.sd-happy__card:hover .sd-happy__img { transform: translateY(-5px);
+  box-shadow: 0 34px 66px -26px color-mix(in srgb, var(--primary) 50%, rgba(21,27,24,.5)); }
+.sd-happy__img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.sd-happy__cap { margin-top: 16px; }
+.sd-happy__label { display: inline-flex; align-items: center; font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--primary);
+  padding: 4px 10px; border-radius: 999px; background: var(--accent); border: 1px solid color-mix(in srgb, var(--primary) 14%, transparent); }
+.sd-happy__cap p { margin-top: 10px; font-size: clamp(16px, 1.5vw, 19px); font-weight: 600; letter-spacing: -.02em; line-height: 1.3; }
+@media (max-width: 860px) {
+  .sd-happy__grid { grid-template-columns: 1fr; max-width: 460px; margin-inline: auto; gap: 26px; }
+}
 
 /* ---------- flow: cinematic escrow diorama (Buyer · SafeDeal phone · Seller, parallax) ---------- */
-.sd-flow--cine { position: relative; height: 340vh; background: var(--card); border-top: 1px solid var(--hair); border-bottom: 1px solid var(--hair); }
+.sd-flow--cine { position: relative; height: 340vh; background: color-mix(in srgb, var(--primary) 4%, var(--card)); border-top: 1px solid var(--hair); border-bottom: 1px solid var(--hair); }
 .sd-cine { position: sticky; top: 0; height: 100vh; overflow: hidden; }
 
 /* parallax layer 0 — ambient brand mesh + faint grid */
@@ -268,9 +342,14 @@
 
 /* phone frame (bezel is a marketing device, fixed dark value); crossfades the real deal screens */
 .sd-fphone { width: min(300px, 82vw); }
-.sd-fphone__frame { width: 100%; background: #0f1113; border-radius: 42px; padding: 9px;
-  box-shadow: 0 34px 80px -30px rgba(21,27,24,.5), 0 10px 28px -14px rgba(21,27,24,.3); }
-.sd-fphone__screen { position: relative; border-radius: 33px; overflow: hidden; background: var(--background); height: min(560px, 64vh); display: flex; flex-direction: column; }
+/* Space-grey machined rail to match the hero device (this smaller diorama phone stays CSS-drawn). */
+.sd-fphone__frame { width: 100%; border-radius: 46px; padding: 10px;
+  background: linear-gradient(118deg, #63676d 0%, #26282c 13%, #4b4f55 30%, #191b1e 50%, #43474d 70%, #17191c 88%, #5a5e65 100%);
+  box-shadow:
+    0 40px 84px -30px rgba(21,27,24,.55), 0 12px 30px -14px rgba(21,27,24,.34),
+    inset 0 0 0 1px rgba(255,255,255,.22); }
+.sd-fphone__screen { position: relative; border-radius: 37px; overflow: hidden; background: var(--background); height: min(560px, 64vh); display: flex; flex-direction: column;
+  box-shadow: 0 0 0 6px #0a0c0e; }
 /* SafeDeal-custody overlay: while the money is held, the screen frosts green and shows the SafeDeal mark */
 .sd-fphone__custody { position: absolute; inset: 0; z-index: 7; display: grid; place-content: center; justify-items: center; gap: 16px;
   background: color-mix(in srgb, var(--primary) 22%, transparent);
@@ -283,7 +362,7 @@
 .sd-fphone__custody strong { font-size: 17px; color: #fff; letter-spacing: -.01em; text-shadow: 0 1px 8px rgba(0,0,0,.22); }
 .sd-fphone__screen::after { content: ""; position: absolute; inset: auto 0 0 0; height: 50px; pointer-events: none; z-index: 5;
   background: linear-gradient(to bottom, transparent, var(--background)); }
-.sd-fphone__island { position: absolute; top: 11px; left: 50%; transform: translateX(-50%); width: 74px; height: 20px; background: #0b0d0f; border-radius: 999px; z-index: 6; }
+.sd-fphone__island { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 64px; height: 18px; background: #0b0d0f; border-radius: 999px; z-index: 6; }
 .sd-fphone__status { display: flex; align-items: center; justify-content: space-between; padding: 13px 18px 6px; font-size: 12px; font-weight: 600; }
 .sd-fphone__sig { display: inline-flex; align-items: center; gap: 5px; }
 .sd-fphone__sig svg { display: block; }
@@ -298,22 +377,36 @@
 .sd-fscr__body { padding: 14px 15px 0; }
 
 /* ---------- trust: horizontal slider on scroll ---------- */
-.sd-trust { position: relative; height: 260vh; background: var(--card); border-top: 1px solid var(--hair); border-bottom: 1px solid var(--hair); }
+/* Trust proof rail — the second dark anchor. Deep ground turns the six guarantee cards into
+ * glowing glass panels (premium fintech read). Text is scoped light within the section. */
+.sd-trust { position: relative; height: 260vh; color: #f4fbf7;
+  background:
+    radial-gradient(60% 70% at 22% 30%, color-mix(in srgb, var(--brand-bright) 16%, var(--ink-deep)), transparent 70%),
+    linear-gradient(180deg, var(--ink-deep), var(--ink-deep-2) 60%, var(--ink-deep));
+  border-top: 1px solid color-mix(in srgb, var(--brand-bright) 20%, transparent); border-bottom: 1px solid color-mix(in srgb, var(--brand-bright) 20%, transparent); }
+.sd-trust .sd-h2 { color: #f4fbf7; }
+.sd-trust .sd-kicker { color: var(--glow-lime); }
+.sd-trust .sd-lead { color: color-mix(in srgb, #f4fbf7 72%, transparent); }
 .sd-trust__sticky { position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column; justify-content: center;
   gap: clamp(22px, 4vh, 42px); overflow: hidden; }
 .sd-trust__head { text-align: left; }
 .sd-trust__vp { overflow: hidden; width: 100%; }
 .sd-trust__track { display: flex; gap: 18px; padding-inline: var(--gutter); will-change: transform; }
-.sd-tcard { flex: 0 0 clamp(300px, 40vw, 460px); background: var(--card); border: 1px solid var(--border); border-radius: var(--radius, 12px);
-  padding: clamp(28px, 3vw, 38px); box-shadow: var(--shadow-sm, 0 1px 3px rgba(21,27,24,.06)); display: flex; flex-direction: column; min-height: 270px; }
-.sd-tcard .ic { width: 46px; height: 46px; border-radius: 12px; background: var(--accent); color: var(--primary); display: grid; place-items: center; margin-bottom: 16px; }
+.sd-tcard { flex: 0 0 clamp(300px, 40vw, 460px);
+  background: linear-gradient(160deg, color-mix(in srgb, #ffffff 9%, transparent), color-mix(in srgb, #ffffff 3%, transparent));
+  border: 1px solid color-mix(in srgb, var(--brand-bright) 22%, rgba(255,255,255,.08)); border-radius: var(--radius, 12px);
+  backdrop-filter: blur(8px); box-shadow: 0 24px 60px -30px rgba(0,0,0,.7), inset 0 1px 0 rgba(255,255,255,.06);
+  padding: clamp(28px, 3vw, 38px); display: flex; flex-direction: column; min-height: 270px; }
+.sd-tcard .ic { width: 46px; height: 46px; border-radius: 12px; margin-bottom: 16px; display: grid; place-items: center;
+  background: color-mix(in srgb, var(--brand-bright) 20%, transparent); color: var(--glow-lime);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--brand-bright) 30%, transparent), 0 0 24px -6px color-mix(in srgb, var(--brand-bright) 50%, transparent); }
 .sd-tcard .ic svg { width: 23px; height: 23px; }
-.sd-tcard h3 { font-size: 17.5px; } .sd-tcard p { margin-top: 8px; font-size: 14px; color: var(--muted-foreground); }
+.sd-tcard h3 { font-size: 17.5px; color: #f4fbf7; } .sd-tcard p { margin-top: 8px; font-size: 14px; color: color-mix(in srgb, #f4fbf7 66%, transparent); }
 .sd-trust__prog { display: flex; align-items: center; gap: 16px; padding-inline: var(--gutter); max-width: var(--maxw); margin: 0 auto; width: 100%; }
-.sd-trust__bar { flex: 1; height: 3px; background: var(--border); border-radius: 3px; position: relative; overflow: hidden; }
-.sd-trust__bar span { position: absolute; inset: 0 auto 0 0; width: 0; background: linear-gradient(90deg, var(--primary), color-mix(in srgb, var(--primary) 78%, #16a06a)); border-radius: 3px; }
-.sd-trust__count { font-family: var(--font-mono, ui-monospace, monospace); font-size: 12.5px; color: var(--muted-foreground); white-space: nowrap; }
-.sd-trust__count b { color: var(--foreground); }
+.sd-trust__bar { flex: 1; height: 3px; background: color-mix(in srgb, #ffffff 14%, transparent); border-radius: 3px; position: relative; overflow: hidden; }
+.sd-trust__bar span { position: absolute; inset: 0 auto 0 0; width: 0; background: linear-gradient(90deg, var(--brand-bright), var(--glow-lime)); border-radius: 3px; box-shadow: 0 0 12px -2px color-mix(in srgb, var(--brand-bright) 70%, transparent); }
+.sd-trust__count { font-family: var(--font-mono, ui-monospace, monospace); font-size: 12.5px; color: color-mix(in srgb, #f4fbf7 60%, transparent); white-space: nowrap; }
+.sd-trust__count b { color: #f4fbf7; }
 
 /* ---------- Inside SafeDeal: static asymmetric product board ---------- */
 .sd-inside { position: relative; overflow: hidden; padding-block: clamp(88px, 10vw, 140px); color: var(--foreground);
@@ -561,7 +654,9 @@
 .sd-support-flow__pill--human { right: 1%; bottom: 7%; min-height: 52px; color: var(--primary); background: color-mix(in srgb, var(--accent) 66%, var(--card)); transform: rotate(-2deg); }
 .sd-support-flow__pill--human svg:last-child { margin-left: 3px; }
 
-@media (max-width: 900px), (max-height: 680px) {
+/* The two-column board needs ~1024px to breathe (board min 560 + story 290 + gap + gutters);
+ * below that it crammed against the right edge, so fall back to the clean stacked mobile list. */
+@media (max-width: 1024px), (max-height: 680px) {
   .sd-inside { padding-block: clamp(76px, 11vw, 110px); }
   .sd-inside__layout { display: block; }
   .sd-inside__story > h2 { max-width: 15ch; }
@@ -798,9 +893,12 @@
 }
 
 /* ---------- final cta ---------- */
-.sd-ctafinal { position: relative; overflow: hidden; border-radius: calc(var(--radius, 12px) + 14px); padding: clamp(36px, 5vw, 70px);
-  text-align: center; color: #fff; background: linear-gradient(135deg, #05432f, var(--primary) 55%, color-mix(in srgb, var(--primary) 70%, #16a06a));
-  box-shadow: var(--shadow-lg, 0 18px 48px -18px rgba(21,27,24,.24)); }
+.sd-ctafinal { position: relative; overflow: hidden; border-radius: calc(var(--radius, 12px) + 14px); padding: clamp(40px, 6vw, 80px);
+  text-align: center; color: #fff;
+  background:
+    radial-gradient(80% 120% at 50% -10%, color-mix(in srgb, var(--glow-lime) 30%, transparent), transparent 60%),
+    linear-gradient(150deg, var(--ink-deep), var(--primary) 60%, color-mix(in srgb, var(--primary) 62%, var(--glow-lime)));
+  box-shadow: 0 30px 80px -30px color-mix(in srgb, var(--primary) 70%, transparent), var(--shadow-lg, 0 18px 48px -18px rgba(21,27,24,.24)); }
 .sd-ctafinal .grid-bg { position: absolute; inset: 0; opacity: .5;
   background-image: linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px);
   background-size: 42px 42px; -webkit-mask-image: radial-gradient(80% 90% at 50% 0%, #000, transparent); mask-image: radial-gradient(80% 90% at 50% 0%, #000, transparent); }
@@ -906,7 +1004,7 @@
   .sd-cine__phone { position: static !important; transform: none !important; width: 100%; margin-top: 24px; }
   .sd-cine__phone .sd-fphone { width: 100%; max-width: 460px; margin: 0 auto; }
   .sd-fphone__frame { background: transparent; padding: 0; box-shadow: none; }
-  .sd-cine__phone .sd-fphone__screen { height: auto; border-radius: 0; display: block; overflow: visible; }
+  .sd-cine__phone .sd-fphone__screen { height: auto; border-radius: 0; display: block; overflow: visible; box-shadow: none; }
   .sd-fphone__screen::after, .sd-fphone__island, .sd-fphone__status, .sd-fphone__bar { display: none; }
   .sd-fphone__app { position: static; overflow: visible; }
   .sd-fscr { position: static; inset: auto; opacity: 1; visibility: visible; transform: none; margin-top: 30px; padding-top: 30px; border-top: 1px solid var(--hair); }

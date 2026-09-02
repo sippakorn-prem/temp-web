@@ -5,6 +5,7 @@ import { LOCALES, isLocale } from "@/i18n/config";
 import { LandingHeader } from "@/components/marketing/landing-header";
 import { Hero } from "@/components/marketing/hero";
 import { ProblemSection } from "@/components/marketing/problem-section";
+import { HappySection } from "@/components/marketing/happy-section";
 import { FlowSection } from "@/components/marketing/flow-section";
 import { TrustSection } from "@/components/marketing/trust-section";
 import { RealAppSection } from "@/components/marketing/real-app-section";
@@ -55,6 +56,7 @@ export default async function LandingPage({ params }: { params: Promise<{ locale
       <LandingHeader />
       <Hero />
       <ProblemSection />
+      <HappySection />
       <FlowSection />
       <TrustSection />
       <RealAppSection />

@@ -3,6 +3,7 @@ import { Badge, EscrowTimeline } from "@/components/ds";
 import { formatBaht } from "@/lib/money";
 import { cn } from "@/lib/ds-utils";
 import { card, code as codeClass, money, note } from "@/lib/ui";
+import { PhoneFrame } from "./phone-frame";
 
 /**
  * A faithful, static marketing snapshot of the real deal room ([deal-detail.tsx]) in the funded /
@@ -32,7 +33,6 @@ export async function DealPreview() {
     <div className="sd-phone" aria-hidden>
       <div className="sd-phone__frame">
         <div className="sd-phone__screen">
-          <div className="sd-phone__island" />
           <div className="sd-phone__status">
             <span className="sd-phone__time">9:41</span>
             <span className="sd-phone__sig">
@@ -93,6 +93,7 @@ export async function DealPreview() {
             </section>
           </div>
         </div>
+        <PhoneFrame className="sd-phone__device" id="hero" />
       </div>
     </div>
   );

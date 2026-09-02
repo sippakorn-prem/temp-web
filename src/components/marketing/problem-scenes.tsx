@@ -44,7 +44,7 @@ export function ProblemScenes({
         // Preserve the original scene-level entrance timing at every breakpoint: the first scene
         // enters from the left, the second from the right, and each image counters that direction.
         // Tying both layers to the pin prevents compact layouts from completing before scrolling.
-        const entrance = easeOut(Math.min(1, pin / 0.35));
+        const entrance = easeOut(Math.min(1, pin / 0.6));
         const dist = mq.matches ? Math.min(72, window.innerWidth * 0.18) : 100;
         const tdir = s.dir === "left" ? -1 : 1;
         const textY = mq.matches ? -pin * 12 : 0;

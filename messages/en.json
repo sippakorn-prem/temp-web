@@ -36,6 +36,20 @@
       "resolvePre": "So neither of you goes first.",
       "resolveAccent": "SafeDeal holds the money in the middle."
     },
+    "happy": {
+      "kicker": "Life with SafeDeal",
+      "h": "Everyone walks away happy.",
+      "lead": "The deal ends the way it should — for both sides.",
+      "buyerLabel": "The buyer",
+      "buyerCap": "Gets exactly what they paid for.",
+      "buyerAlt": "A happy buyer opening a parcel that arrived safely at home",
+      "sellerLabel": "The seller",
+      "sellerCap": "Gets paid, in full, every time.",
+      "sellerAlt": "A happy seller who just got paid for their sale",
+      "trustLabel": "Both of you",
+      "trustCap": "Trust a stranger, safely.",
+      "trustAlt": "Two people happily completing a deal in person"
+    },
     "flow": {
       "kicker": "How it works",
       "h": "One safe deal, start to finish.",

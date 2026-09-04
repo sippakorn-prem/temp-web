@@ -20,10 +20,12 @@
       "eyebrow": "Fees start at ฿0",
       "h1": "Buy and sell safely",
       "h2": "with SafeDeal",
+      "lead": "SafeDeal holds the payment safely in the middle until the buyer confirms the item arrived — then the seller gets paid. Neither side has to risk going first.",
       "c1": "Payment held until delivery",
       "c2": "Multiple ways to pay",
       "c3": "Buyer and seller verified",
-      "ctaStart": "Start your deal today"
+      "ctaStart": "Start your deal today",
+      "ctaHow": "See how it works"
     },
     "problem": {
       "tag": "The problem",

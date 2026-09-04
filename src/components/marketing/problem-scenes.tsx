@@ -44,7 +44,7 @@ export function ProblemScenes({
         // Preserve the original scene-level entrance timing at every breakpoint: the first scene
         // enters from the left, the second from the right, and each image counters that direction.
         // Tying both layers to the pin prevents compact layouts from completing before scrolling.
-        const entrance = easeOut(Math.min(1, pin / 0.6));
+        const entrance = easeOut(Math.min(1, pin / 0.32));
         const dist = mq.matches ? Math.min(72, window.innerWidth * 0.18) : 100;
         const tdir = s.dir === "left" ? -1 : 1;
         const textY = mq.matches ? -pin * 12 : 0;
@@ -53,7 +53,7 @@ export function ProblemScenes({
         s.text.style.opacity = entrance.toFixed(3);
         s.media.style.transform = `translate3d(${((1 - entrance) * dist * -tdir).toFixed(1)}px,${mediaY.toFixed(1)}px,0)`;
         s.media.style.opacity = entrance.toFixed(3);
-        const imageTravel = mq.matches ? 10 : 8;
+        const imageTravel = mq.matches ? 10 : 18;
         const imageBaseScale = mq.matches ? 1.025 : 1.02;
         const imageScaleTravel = mq.matches ? 0.035 : 0.025;
         s.image.style.transform = `translate3d(0,${((0.5 - pin) * imageTravel).toFixed(1)}px,0) scale(${(imageBaseScale + pin * imageScaleTravel).toFixed(4)})`;

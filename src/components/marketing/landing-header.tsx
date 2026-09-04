@@ -18,7 +18,7 @@ export async function LandingHeader() {
 
         <div className="sd-header__cta">
           <LanguageToggle label={t("language")} className="sd-header__language" />
-          <Button asChild variant="ghost" className="hidden whitespace-nowrap sm:inline-flex">
+          <Button asChild variant="ghost" className="sd-header__signin whitespace-nowrap">
             <Link href="/sign-in">{t("signIn")}</Link>
           </Button>
           <Button asChild className="sd-header__primary whitespace-nowrap">

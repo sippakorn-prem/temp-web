@@ -2,7 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { Reveal } from "./reveal";
 import { ScrollProgress } from "./scroll-progress";
 
-// Display height (px) fixed; intrinsic w/h reserve the ratio so space is held before load.
+// CSS controls responsive display height; intrinsic dimensions preserve each logo's ratio.
 const LOGOS = [
   { src: "/payments/promptpay.png", alt: "PromptPay", w: 422, h: 160 },
   { src: "/payments/visa.png", alt: "Visa", w: 276, h: 112 },
@@ -23,7 +23,7 @@ export async function PaymentLogos() {
         <Reveal stagger className="sd-pay__logos">
           {LOGOS.map((l) => (
             // eslint-disable-next-line @next/next/no-img-element -- static brand marks, varied ratios
-            <img key={l.alt} src={l.src} alt={l.alt} width={l.w} height={l.h} loading="lazy" decoding="async" style={{ height: 38, width: "auto" }} />
+            <img key={l.alt} src={l.src} alt={l.alt} width={l.w} height={l.h} loading="lazy" decoding="async" />
           ))}
         </Reveal>
       </div>

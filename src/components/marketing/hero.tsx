@@ -7,8 +7,7 @@ import { ScrollProgress } from "./scroll-progress";
 
 /**
  * Split hero: the pitch on the left, a phone showing the real product — a deal held in escrow —
- * on the right (<DealPreview>). Copy rises in via <Reveal>, while the mesh, copy, and phone move
- * at restrained, different scroll depths.
+ * on the right (DealPreview), over a light dot-grid background. Copy rises in via Reveal.
  */
 export async function Hero() {
   const t = await getTranslations("landing.hero");
@@ -32,6 +31,9 @@ export async function Hero() {
               <span className="sd-h1__line g">{t("h2")}</span>
             </h1>
           </Reveal>
+          <Reveal>
+            <p className="sd-hero__lead">{t("lead")}</p>
+          </Reveal>
           <Reveal stagger className="sd-chips">
             {["c1", "c2", "c3"].map((k) => (
               <span key={k} className="sd-chip">
@@ -49,6 +51,9 @@ export async function Hero() {
                 {t("ctaStart")}
                 <Arrow />
               </Link>
+            </Button>
+            <Button asChild variant="ghost" size="lg" className="sd-hero__secondary">
+              <Link href="#flow">{t("ctaHow")}</Link>
             </Button>
           </Reveal>
 

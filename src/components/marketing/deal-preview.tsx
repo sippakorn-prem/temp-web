@@ -58,7 +58,7 @@ export async function DealPreview() {
               <Badge variant="info">{td("stages.funded")}</Badge>
             </div>
 
-            <div className="mt-3 grid grid-cols-[1fr_auto] items-center gap-3 rounded-xl border border-info-border bg-info-bg px-3.5 py-3">
+            <div className="sd-phone__held mt-3 grid grid-cols-[1fr_auto] items-center gap-3 rounded-xl border border-info-border bg-info-bg px-3.5 py-3">
               <div className="min-w-0">
                 <strong className="text-[13px]">{td("held.label")}</strong>
                 <p className={cn(note, "mt-0.5 text-[11px]")}>{td("held.body")}</p>
